@@ -1,47 +1,110 @@
+/* General styles */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f4f4;
-  padding: 40px;
 }
 
-.form-container {
-  max-width: 400px;
-  margin: auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Flexbox navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 15px;
 }
 
-label {
-  display: block;
-  margin-top: 15px;
+nav a {
+  color: white;
+  text-decoration: none;
   font-weight: bold;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Grid layout for content */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
 }
 
-button {
-  margin-top: 15px;
-  background: #007acc;
-  color: white;
-  padding: 10px;
-  border: none;
+/* Contact form styles */
+.contact-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* To-Do List styles */
+.todo-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.todo-section input {
+  padding: 8px;
+  width: 70%;
+}
+
+.todo-section button {
+  padding: 8px;
+  margin-left: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.todo-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.todo-section li {
+  background: #e7f3ff;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #005f99;
+/* Responsive design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-#error {
-  color: red;
-}
